@@ -2,7 +2,7 @@ name: Build and Deploy Lectures
 
 on:
   push:
-    branches: [main]
+    branches: [DL]
   workflow_dispatch:
 
 permissions:
