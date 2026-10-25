@@ -1,0 +1,74 @@
+{
+  "status": "PASS: real inference and source parity; rendering not tested",
+  "python": "3.11.16",
+  "torch": "2.14.0+cu132",
+  "numpy": "2.4.6",
+  "shapes": {
+    "input_shape": [
+      2,
+      4,
+      512
+    ],
+    "patch_shape": [
+      2,
+      4,
+      7,
+      128
+    ],
+    "embedding_shape": [
+      2,
+      4,
+      7,
+      64
+    ],
+    "temporal_input_shape": [
+      8,
+      7,
+      64
+    ],
+    "temporal_shape": [
+      2,
+      7,
+      64
+    ],
+    "spatial_input_shape": [
+      14,
+      4,
+      64
+    ],
+    "spatial_shape": [
+      2,
+      4,
+      64
+    ],
+    "fusion_shape": [
+      2,
+      12,
+      64
+    ]
+  },
+  "max_errors_vs_original_forward": {
+    "patch": 0.0,
+    "temporal": 0.0,
+    "spatial": 0.0,
+    "fused": 0.0,
+    "logit": 0.0
+  },
+  "p_open": [
+    0.2028212994337082,
+    0.4271177053451538
+  ],
+  "predicted_conditions": [
+    "closed",
+    "closed"
+  ],
+  "true_conditions": [
+    "closed",
+    "open"
+  ],
+  "plots_valid_json": 3,
+  "n_text_blocks": 23,
+  "n_notes": 8,
+  "no_training": true,
+  "LecTrace_browser_validation": "NOT RUN: package download blocked by DNS/network in authoring environment"
+}

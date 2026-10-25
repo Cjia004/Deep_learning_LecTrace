@@ -1,0 +1,3 @@
+lectrace>=1.1.23,<2
+numpy>=1.26
+torch>=2.2

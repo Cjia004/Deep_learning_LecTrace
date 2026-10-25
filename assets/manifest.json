@@ -1,0 +1,70 @@
+{
+  "dataset": "OpenNeuro ds003478 v1.1.0",
+  "dataset_url": "https://doi.org/10.18112/openneuro.ds003478.v1.1.0",
+  "source_zip_sha256": "33dd567f1d4385ebe2d06a1bf59cf875bb05dbf08b635c6db70afeb2071f10b2",
+  "checkpoint_source": "results/step10d/checkpoints/ch4_TS_fold0_seed0.pt",
+  "channels": [
+    "FP1",
+    "FP2",
+    "F3",
+    "F4"
+  ],
+  "checkpoint": {
+    "task": "eyes closed (0) vs open (1)",
+    "channel_set": "ch4",
+    "mode": "TS",
+    "fold": 0,
+    "seed": 0
+  },
+  "selection_rule": "First fold-0 test subject and recording in sorted order having both conditions; first retained window of each condition, before any inference.",
+  "records": [
+    {
+      "sub": "sub-010",
+      "run": "01",
+      "win": 0,
+      "condition": "closed",
+      "t0_seconds": 16.90625,
+      "fold": 0
+    },
+    {
+      "sub": "sub-010",
+      "run": "01",
+      "win": 32,
+      "condition": "open",
+      "t0_seconds": 117.109375,
+      "fold": 0
+    }
+  ],
+  "results": {
+    "bdi_auc": 0.6927536231884057,
+    "bdi_lr_auc": 0.6118840579710146,
+    "bdi_delta": 0.0808695652173911,
+    "bdi_delta_lo": -0.0089969708813758,
+    "bdi_delta_hi": 0.184949987470765,
+    "control_auc": 0.9197553416078824,
+    "control_lo": 0.8980600064245909,
+    "control_hi": 0.9420951265114738,
+    "probe_trained": 0.7492497521496954,
+    "probe_trained_sd": 0.0428409183633615,
+    "probe_random": 0.4714563355650094,
+    "probe_random_sd": 0.0449331287059899
+  },
+  "result_sources": [
+    "results/step10b/supervised/summary.csv",
+    "results/step10d/control_task_summary.csv",
+    "results/step11_probe_summary.csv"
+  ],
+  "lr_auc_derivation": "supervised ch4 TS auc minus stored d_auc_vs_lr",
+  "display_note": "Two windows illustrate inference; no metric is estimated from them. Trained fold/seed is fixed for exposition, not selected for performance.",
+  "file_sha256": {
+    "assets/ch4_TS_fold0_seed0.pt": "65ce12e1d0b36aad9f86f075cca43c1754d3ee6092a0338959e1d34a6f2934ee",
+    "assets/control_task_summary.csv": "ebecca4d9b0d360fac1de539b845cd57bbd9965c9ec467b36a90fd70e21e5400",
+    "assets/example_windows.npz": "b22703a20fd15f98b567856cbcb7d94117e25818452426946c07cff70929a4d6",
+    "assets/folds.csv": "2436ad98412123e5cb87f666f0de97144b4a7240b3562913aaf79141e48a5052",
+    "assets/step11_probe_summary.csv": "1699a0427605e1abcc9575326124935492d175377999785ad327b723b1bf412e",
+    "assets/summary.csv": "06993e8299fba6319a960ceaf96e8a631cf8e998074febd7ff5b5642021c3094",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/config.py": "4462856b933c82703a4659df4dabf371f4a1f8f850587c4c7de9f2a71c9e728f",
+    "src/model.py": "45ad24ed0431a7c643ed19d574caa8dd82a80d7aad7f0088efc45ff35dc34220"
+  }
+}
